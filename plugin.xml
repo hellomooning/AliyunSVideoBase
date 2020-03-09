@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-aliyun-svideo-base" version="1.0.0" 
+    xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>AliyunSVideoBase</name>
+    <js-module name="AliyunSVideoBase" src="www/AliyunSVideoBase.js">
+        <clobbers target="cordova.plugins.AliyunSVideoBase" />
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="AliyunSVideoBase">
+                <param name="android-package" value="org.apache.cordova.aliyunsvideobase.AliyunSVideoBase" />
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml">
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.CAMERA" />
+            <uses-permission android:name="android.permission.FLASHLIGHT" />
+            <uses-permission android:name="android.permission.RECORD_VIDEO" />
+            <uses-permission android:name="android.permission.RECORD_AUDIO" />
+            <uses-permission android:name="android.permission.INTERNET" />
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+        </config-file>
+        <source-file src="src/android/AliyunSVideoBase.java" target-dir="org/apache/cordova/aliyunsvideobase" />
+        <framework src="src/android/AliyunSVideoBase.gradle" custom="true" type="gradleReference"/>
+        <source-file src="libs/android/AlivcConan-1.0.2.aar" target-dir="app/libs"/>
+        <source-file src="libs/android/AlivcMedia.aar" target-dir="app/libs"/>
+        <source-file src="libs/android/AlivcSvideoFFmpeg-1.1.0.aar" target-dir="app/libs"/>
+        <source-file src="libs/android/AliyunSnap.aar" target-dir="app/libs"/>
+        <source-file src="libs/android/AliyunSVideoBase.aar" target-dir="app/libs"/>
+        <source-file src="libs/android/AliyunVideoCommon.aar" target-dir="app/libs"/>
+        <source-file src="libs/android/core-1.2.2.jar" target-dir="app/libs"/>
+        <source-file src="libs/android/snap_crop.aar" target-dir="app/libs"/>
+        <source-file src="libs/android/snap_record.aar" target-dir="app/libs"/>
+        <source-file src="libs/android/svideosnap-3.14.0.aar" target-dir="app/libs"/>
+        <source-file src="assets/android/AliyunDemo/filter.zip" target-dir="app/src/main/assets/AliyunDemo"/>
+    </platform>
+</plugin>
