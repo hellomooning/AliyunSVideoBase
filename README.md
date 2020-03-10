@@ -16,8 +16,8 @@
 #### 视频拍摄
     cordova.plugins.AliyunSVideoBase.startRecord();
 
-#### 视频剪辑
+#### 视频裁剪
     cordova.plugins.AliyunSVideoBase.startCrop();
 
 ### 3.Demo
-https://github.com/hellomooning/AliyunSVideoDemo
+https://github.com/hellomooning/AliyunSVideoBaseDemo
