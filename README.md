@@ -5,7 +5,11 @@
 ### 1.插件安装
     ionic cordova plugin add https://github.com/hellomooning/AliyunSVideoBase.git
 
-如因网络问题安装失败，可以下载到本地再安装：
+如因网络问题安装失败，可以同步gitee插件：
+    
+    ionic cordova plugin add https://gitee.com/mooning/AliyunSVideoBase.git
+
+或者下载到本地再安装：
     
     ionic cordova plugin add 本地目录
 
